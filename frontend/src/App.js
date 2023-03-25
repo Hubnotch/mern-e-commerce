@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-
+import data from "./data"
 function App() {
   return (
     <div>
@@ -7,7 +7,12 @@ function App() {
         <a href="/">ribsmarket</a>
       </header>
       <main>
-        List Products
+        <h1>Featured Products</h1>
+        <div>
+          {data.products.map(product => (
+            <div key={product.brand}></div>
+          ))}
+        </div>
       </main>
     </div>
   );
